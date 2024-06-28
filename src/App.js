@@ -12,7 +12,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://3191-38-170-181-10.ngrok-free.app/make-call/${phoneNumber}`);
+      const response = await axios.post(`https://testcall.saleup.cloud/make-call/${phoneNumber}`);
       setMessage(response.data);
     } catch (error) {
       setMessage(`Error: ${error.response ? error.response.data : error.message}`);
