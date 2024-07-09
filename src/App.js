@@ -11,7 +11,8 @@ function App() {
   const [notodo, setNotodo] = useState('');
 
   useEffect(() => {
-    const ws = new WebSocket('wss://tescall.saleup.cloud/client-connection');
+    const ws = new WebSocket('wss://testcall.saleup.cloud/client-connection');
+
     ws.onopen = () => {
       console.log('Connected to WebSocket server');
     };
@@ -45,7 +46,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://tescall.saleup.cloud/make-call', {
+      const response = await fetch('https://testcall.saleup.cloud/make-call', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
