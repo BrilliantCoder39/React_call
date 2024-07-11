@@ -140,6 +140,18 @@ function App() {
                 TTS Speech {interaction.icount}: {interaction.label}
               </>
             )}
+
+            {interaction.event === 'start' && (
+              <>
+                Call Started
+              </>
+            )}
+
+            {interaction.event === 'stop' && (
+              <>
+                Call Ended
+              </>
+            )}
           </li>
         ))}
       </ul>
